@@ -2,6 +2,7 @@
 
 require('rootpath')();
 var app = require('express')();
+var port = process.env.PORT || 5000;
 
 // Setup database connection
 require('app/middleware/db');
@@ -12,7 +13,7 @@ require('app/middleware/express')(app);
 // Load all routes
 require('app/routes')(app);
 
-app.listen(5000, function() {
-	console.log('Server listening at http://localhost:5000.');
+app.listen(port, function() {
+	console.log('Server listening at http://localhost:%s.', port);
 });
 exports = module.exports = app;
