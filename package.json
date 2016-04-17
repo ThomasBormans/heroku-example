@@ -8,6 +8,9 @@
     "type": "git",
     "url": "https://github.com/ThomasBormans/heroku-example"
   },
+  "scripts": {
+    "start": "node app.js"
+  },
   "author": "Thomas Bormans",
   "dependencies": {
     "body-parser": "^1.15.0",
